@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Octate Systems is passionate about developing web applications that are not only visually stunning but also highly functional. Our team of skilled developers and designers work tirelessly to create seamless user experiences that captivate and engage audiences. We specialize in crafting intuitive interfaces, robust functionality, and efficient deployment processes to ensure your content, services, and products reach the world quickly and effectively. With a focus on user satisfaction, we strive to deliver exceptional web solutions that meet your needs and exceed your expectations.">
+    <meta name="author" content="Kevin Cross Minchakpu">
+    <title>Octate Systems | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook / Open Graph Meta Tags -->
+    <meta property="og:title" content="Octate Systems | Homepage">
+        <meta property="og:description"
+        content="Octate Systems is passionate about developing web applications that are not only visually stunning but also highly functional. Our team of skilled developers and designers work tirelessly to create seamless user experiences that captivate and engage audiences. We specialize in crafting intuitive interfaces, robust functionality, and efficient deployment processes to ensure your content, services, and products reach the world quickly and effectively. With a focus on user satisfaction, we strive to deliver exceptional web solutions that meet your needs and exceed your expectations.">
+        <meta property="og:image"
+        content="https://praizarts.github.io/wdd231/final-project/images/logo.webp">
+        <meta property="og:url"
+        content="https://praizarts.github.io/wdd231/final-project/index.html">
+        <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+   <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Octate Systems Logo">
+            <span>Octate Systems</span> <br>
+            <p class="tagline">RC-9001249</p>
+        </a>
+
+        <button type="button" id="menu-btn" class="menu-btn" aria-label="Toggle Navigation">
+            ☰
+        </button>
+
+        <nav id="primary-nav">
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="services-container">
+    <section id="services-grid" class="services-grid"></section>
+</main>
+
+<dialog id="service-modal" class="service-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-title">Service Title</h2>
+            <button type="button" id="close-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p id="modal-description">Detailed description will populate here...</p>
+        </div>
+    </div>
+</dialog>
+ 
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p class="copyright">&copy; 2026 <span>MovieScoop</span>. All rights reserved.</p>
+            <p class="course-details">WDD231 Final Project &bull; Ignatia Praise Mbachu &bull; Lagos, Nigeria</p>
+        </div>
+        
+        <div class="footer-meta">
+            <p class="timestamp">Last Modified: <span id="last-modified">06/15/2026 14:57:35</span></p>
+            <a href="attributions.html" class="attribution-btn">Resource Attributions</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

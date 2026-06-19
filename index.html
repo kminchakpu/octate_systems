@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Octate Systems is passionate about developing web applications that are not only visually stunning but also highly functional. Our team of skilled developers and designers work tirelessly to create seamless user experiences that captivate and engage audiences. We specialize in crafting intuitive interfaces, robust functionality, and efficient deployment processes to ensure your content, services, and products reach the world quickly and effectively. With a focus on user satisfaction, we strive to deliver exceptional web solutions that meet your needs and exceed your expectations.">
+    <meta name="author" content="Kevin Cross Minchakpu">
+    <title>Octate Systems | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook / Open Graph Meta Tags -->
+    <meta property="og:title" content="Octate Systems | Homepage">
+        <meta property="og:description"
+        content="Octate Systems is passionate about developing web applications that are not only visually stunning but also highly functional. Our team of skilled developers and designers work tirelessly to create seamless user experiences that captivate and engage audiences. We specialize in crafting intuitive interfaces, robust functionality, and efficient deployment processes to ensure your content, services, and products reach the world quickly and effectively. With a focus on user satisfaction, we strive to deliver exceptional web solutions that meet your needs and exceed your expectations.">
+        <meta property="og:image"
+        content="https://praizarts.github.io/wdd231/final-project/images/logo.webp">
+        <meta property="og:url"
+        content="https://praizarts.github.io/wdd231/final-project/index.html">
+        <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+   <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Octate Systems Logo">
+            <span>Octate Systems</span> <br>
+            <p class="tagline">RC-9001249</p>
+        </a>
+
+        <button type="button" id="menu-btn" class="menu-btn" aria-label="Toggle Navigation">
+            ☰
+        </button>
+
+        <nav id="primary-nav">
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">What We Do</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+<!-- HERO -->
+<section class="hero">
+        <div class="hero-content">
+            <h1>Design. Develop. Deploy.</h1>
+            <p>
+                We create innovative digital solutions that drive growth and elevate your brand. From web development to digital marketing, we're your partners in digital transformation.
+            </p>
+
+            <a href="services.html" class="cta-button">Explore Our Services</a>
+
+        </div>
+
+    </section>
+    <!-- FEATURED SECTION -->
+    <section class="featured">
+        <h2>Featured Picks</h2>
+        <p class="section-description">
+            Explore a selection of highly-rated movies and television series.
+        </p>
+        <div id="movie-grid" class="movie-grid">
+            <p class="loading">Loading Services...</p>
+        </div>
+
+    </section>
+    <!-- WHY OCTATE SYSTEMS -->
+    <section class="about-site">
+        <h2>Why Octate Systems?</h2>
+        <div class="benefits">
+            <article class="benefit-card">
+                <h3>We Design</h3>
+                <p>
+                    We create visually stunning and user-friendly interfaces & components that captivate your audience. Our design philosophy focuses on simplicity, elegance, and functionality, ensuring that your clients have an enjoyable experience while exploring your offerings.
+                </p>
+            </article>
+            <article class="benefit-card">
+                <h3>We Develop</h3>
+                <p>
+                    Experience seamless functionality and intuitive design crafted with user satisfaction in mind. Our team is dedicated to creating a platform that is not only visually appealing but also easy to navigate, ensuring your clients can find their next service in your space.
+                </p>
+            </article>
+            <article class="benefit-card">
+                <h3>We Deploy</h3>
+                <p>
+                    Get your content, services, and products to the world quickly and efficiently with our streamlined deployment process. We ensure your experience is smooth and enjoyable, so you can focus on what matters most.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- MODAL -->
+<dialog id="movie-modal">
+    <div class="modal-content">
+        <button type="button" id="close-modal" class="close-btn" aria-label="Close modal">&times;</button>
+        
+        <div class="modal-body-layout">
+            <div class="modal-poster-wrapper">
+                <img id="modal-poster" src="" alt="Movie Poster" loading="lazy">
+            </div>
+            
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-meta"></p>
+                <p id="modal-description"></p>
+                
+                <div class="modal-buttons">
+                    <button type="button" id="add-watchlist" class="watchlist-btn">
+                        Add to Watchlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p class="copyright">&copy; 2026 <span>Octate Systems</span>. All rights reserved.</p>
+            <p class="course-details">🖥️ &bull; Kevin Cross Minchakpu &bull; Lagos, Nigeria</p>
+        </div>
+        
+        <div class="footer-meta">
+            <p class="timestamp">Last Modified: <span id="last-modified">06/15/2026 14:57:35</span></p>
+            <a href="attributions.html" class="attribution-btn">Resource Attributions</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
