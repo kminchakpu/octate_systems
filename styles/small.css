@@ -1052,3 +1052,97 @@ footer {
     margin: 0;
     line-height: 1.4;
 }
+
+/* Contact Details & Maps Panel Module */
+
+.contact-details-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Info Panel Elements */
+.contact-info-panel h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--text);
+    margin: 0 0 0.5rem 0;
+}
+
+.panel-subtitle {
+    color: rgba(248, 250, 252, 0.6);
+    font-family: var(--body-font);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.info-blocks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(248, 250, 252, 0.03);
+}
+
+.info-icon {
+    background-color: var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(245, 187, 0, 0.15);
+}
+
+.info-icon i {
+    font-size: 22px;
+    color: var(--accent);
+}
+
+.info-text h4 {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+    color: var(--text);
+}
+
+.info-text p {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    color: rgba(248, 250, 252, 0.8);
+    margin: 0;
+}
+
+.info-text a {
+    color: rgba(248, 250, 252, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-text a:hover {
+    color: var(--accent);
+}
+
+/* Google Map Container Element */
+.map-wrapper {
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(248, 250, 252, 0.03);
+    min-height: 350px;
+}

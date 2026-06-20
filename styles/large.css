@@ -204,3 +204,16 @@
         padding: 4rem 1.5rem;
     }
 }
+
+/* Responsive Handling (Mobile & Small Screens) */
+@media (max-width: 900px) {
+    .contact-details-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin: 3rem auto;
+    }
+    
+    .map-wrapper {
+        height: 350px;
+    }
+}
