@@ -1,44 +1,57 @@
-import { getServices } from "./dataService.js";
-
-const servicesGrid = document.querySelector("#services-grid");
-
-// Cache DOM Modal elements if your layout uses item expansions
-const modal = document.querySelector("#service-modal");
-const modalTitle = document.querySelector("#modal-title");
-const modalDescription = document.querySelector("#modal-description");
-const closeModalBtn = document.querySelector("#close-modal");
-
-let services = [];
+let servicesData = [];
 let selectedService = null;
 
-// Mobile Menu Navigation toggle
-const menuBtn = document.querySelector("#menu-btn");
-const navigation = document.querySelector(".navigation");
+export async function loadServices() {
+    try {
+        // Fetches your real agency services configuration file
+        const response = await fetch("./data/services.json");
 
-menuBtn?.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-});
+        if (!response.ok) {
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
 
-// Footer Automatic Year Updater
-const currentYearEl = document.querySelector("#current-year");
-if (currentYearEl) {
-    currentYearEl.textContent = new Date().getFullYear();
+        servicesData = await response.json();
+
+        // Targets the updated services layout container
+        const servicesGrid = document.querySelector("#services-grid");
+
+        if (!servicesGrid) return;
+
+        const isHomePage =
+            window.location.pathname.includes("index.html") ||
+            window.location.pathname.endsWith("/");
+
+        // Optional: If you tag specific services as 'featured: true' in your JSON later, 
+        // this keeps your homepage layout tidy automatically.
+        const servicesToDisplay = isHomePage && servicesData.some(s => s.featured)
+            ? servicesData.filter(service => service.featured)
+            : servicesData;
+
+        displayServices(servicesToDisplay, servicesGrid);
+
+    } catch (error) {
+        console.error(error);
+
+        const servicesGrid = document.querySelector("#services-grid");
+
+        if (servicesGrid) {
+            servicesGrid.innerHTML = `
+                <p class="loading">
+                    Unable to load services at this time. Please try refresh.
+                </p>
+            `;
+        }
+    }
 }
 
-async function initialize() {
-    services = await getServices();
-    displayServices(services);
-}
-
-function displayServices(data) {
-    if (!servicesGrid) return;
+function displayServices(services, servicesGrid) {
     servicesGrid.innerHTML = "";
 
-    data.forEach(service => {
+    services.forEach(service => {
         const card = document.createElement("article");
         card.classList.add("service-card");
 
-        // Uses Bootstrap icon class strings dynamically passed from the JSON structure
+        // Renders the exact UI card layout using your Bootstrap Icon choices
         card.innerHTML = `
             <div class="icon-container">
                 <i class="bi ${service.icon}"></i>
@@ -56,34 +69,63 @@ function displayServices(data) {
         servicesGrid.appendChild(card);
     });
 
-    addModalEvents();
+    attachModalEvents();
 }
 
-function addModalEvents() {
-    if (!modal) return; 
+function attachModalEvents() {
+    const buttons = document.querySelectorAll(".details-btn");
 
-    document.querySelectorAll(".details-btn")
-        .forEach(button => {
-            button.addEventListener("click", () => {
-                const id = button.dataset.id;
-                selectedService = services.find(service => service.id === id);
-                
-                if (!selectedService) return;
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Uses standard string lookup since your data IDs are words (e.g. "ui-ux-design")
+            const serviceId = button.dataset.id;
 
-                if (modalTitle) modalTitle.textContent = selectedService.title;
-                if (modalDescription) modalDescription.textContent = selectedService.description;
+            const service = servicesData.find(
+                item => item.id === serviceId
+            );
 
-                modal.showModal();
-            });
+            if (service) {
+                openModal(service);
+            }
         });
-}
-
-if (closeModalBtn && modal) {
-    closeModalBtn.addEventListener("click", () => {
-        modal.close();
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    initialize();
-});
+function openModal(service) {
+    const modal = document.querySelector("#service-modal");
+
+    if (!modal) return;
+
+    selectedService = service;
+
+    // Populates your custom dialog elements safely
+    const modalTitle = document.querySelector("#modal-title");
+    const modalDescription = document.querySelector("#modal-description");
+
+    if (modalTitle) modalTitle.textContent = service.title;
+    if (modalDescription) modalDescription.textContent = service.description;
+
+    modal.showModal();
+}
+
+export function initializeModal() {
+    const modal = document.querySelector("#service-modal");
+    const closeBtn = document.querySelector("#close-modal");
+
+    if (!modal || !closeBtn) return;
+
+    closeBtn.addEventListener("click", () => {
+        modal.close();
+    });
+
+    // Closes the modal smoothly if a user clicks outside the modal card overlay body
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.close();
+        }
+    });
+}
+
+export function getServices() {
+    return servicesData;
+}

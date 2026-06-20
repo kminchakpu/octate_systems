@@ -3,6 +3,7 @@
     --surface: #1E293B;
     --accent: #F5BB00;
     --text: #F8FAFC;
+    --dark-text: #242424;
     --radius: 12px;
     --nav-font: "Play", sans-serif;
     --heading-font: "Play", sans-serif;
@@ -254,6 +255,13 @@ h2 {
     line-height: 1.6;
 }
 
+.featured h2 {
+    color: var(--accent);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 /* IMAGE SECTION */
 
 .hero-media {
@@ -429,3 +437,178 @@ footer {
     color: #ffffff;
 }
 
+
+/* Services Layout Grid */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Service Card Component */
+.service-card {
+    background-color: var(--surface);
+    border: 1px solid rgba(248, 250, 252, 0.05); 
+    border-radius: var(--radius);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+
+.icon-container {
+    background-color: var(--primary); 
+    border: 1px solid rgba(245, 187, 0, 0.15); 
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+}
+
+.icon-container i {
+    font-size: 32px;
+    color: var(--accent);
+}
+
+/* Card Content */
+.service-card h3 {
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: var(--text);
+}
+
+.service-card p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(248, 250, 252, 0.75); 
+    margin: 0 0 30px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
+/* Learn More Link Buttons */
+.details-btn {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+
+.details-btn i {
+    color: var(--accent);
+    transition: transform 0.2s ease;
+}
+
+.details-btn:hover {
+    color: var(--accent);
+}
+
+.details-btn:hover i {
+    transform: translateX(4px); 
+}
+
+/* Service Details Modal  */
+.service-modal {
+    border: 1px solid rgba(248, 250, 252, 0.1);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    color: var(--text);
+    max-width: 500px;
+    width: 90%;
+    padding: 0;
+    box-shadow: var(--shadow);
+    margin: auto;
+    inset: 0;
+}
+
+
+.service-modal::backdrop {
+    background: rgba(15, 23, 42, 0.85); 
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    padding: 30px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(248, 250, 252, 0.1);
+    padding-bottom: 15px;
+}
+
+.modal-header h2 {
+    font-family: var(--heading-font);
+    margin: 0;
+    font-size: 24px;
+    color: var(--accent);
+}
+
+#close-modal {
+    background: none;
+    border: none;
+    color: var(--text);
+    opacity: 0.6;
+    font-size: 28px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+#close-modal:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+.modal-body p {
+    font-family: var(--body-font);
+    color: rgba(248, 250, 252, 0.85);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.modal-action-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--accent);
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

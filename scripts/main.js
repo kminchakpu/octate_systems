@@ -1,10 +1,10 @@
-import { loadMovies, initializeModal } from "./movies.js";
+import { loadServices, initializeModal } from "./services.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     setupNavigation();
     setupFooter();
     initializeModal();
-    loadMovies();
+    loadServices();
 });
 
 function setupNavigation() {
