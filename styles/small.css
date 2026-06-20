@@ -905,4 +905,150 @@ footer {
     box-shadow: var(--shadow);
 }
 
-        
+/* Individual Service Page */
+
+.page-header-banner {
+    background: linear-gradient(135deg, var(--surface) 0%, var(--primary) 100%);
+    padding: 5rem 2rem 4rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(248, 250, 252, 0.05);
+}
+
+.page-header-banner h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--text);
+    margin: 0 0 1rem 0;
+}
+
+.page-header-banner p {
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    color: rgba(248, 250, 252, 0.75);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Structural Layout Content Containers */
+.inner-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.inner-section h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-family: var(--body-font);
+    color: rgba(248, 250, 252, 0.6);
+    margin:-0.5rem auto 3.5rem auto;
+    font-size: 1.05rem;
+    max-width: 650px;
+    line-height: 1.5;
+}
+
+/* Vertical Capabilities Pillar Alignment */
+.capabilities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.capability-row {
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem;
+    border: 1px solid rgba(248, 250, 252, 0.03);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.capability-icon-box {
+    background-color: var(--primary);
+    border: 1px solid rgba(245, 187, 0, 0.15);
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.capability-icon-box i {
+    font-size: 28px;
+    color: var(--accent);
+}
+
+.capability-text h3 {
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    margin: 0 0 0.75rem 0;
+    color: var(--text);
+}
+
+.capability-text p {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(248, 250, 252, 0.8);
+    margin: 0;
+}
+
+/* Modern Infrastructure Grid Layout */
+.frameworks-section {
+    background-color: rgba(30, 41, 59, 0.3); 
+    border-top: 1px solid rgba(248, 250, 252, 0.02); 
+    border-bottom: 1px solid rgba(248, 250, 252, 0.02);
+}
+
+.frameworks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.framework-card {
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.framework-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.framework-card i {
+    font-size: 36px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.framework-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.framework-card p {
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    color: rgba(248, 250, 252, 0.6);
+    margin: 0;
+    line-height: 1.4;
+}

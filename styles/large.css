@@ -160,6 +160,15 @@
     .subscribe-card h3 {
         font-size: 1.5rem;
     }
+
+    .capability-row {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 2rem 1.5rem;
+    }
+    .page-header-banner h1 {
+        font-size: 2rem;
+    }
 } 
 
 

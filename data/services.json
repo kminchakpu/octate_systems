@@ -3,54 +3,63 @@
     "id": "brand-identity-design",
     "icon": "bi-palette",
     "title": "Brand Identity Design",
-    "description": "Crafting unique, memorable visual identities that capture your company's essence, building a consistent and trustworthy image across all physical and digital touchpoints."
+    "description": "Crafting unique, memorable visual identities that capture your company's essence, building a consistent and trustworthy image across all physical and digital touchpoints.",
+    "link": "brand-identity-design.html"
   },
   {
     "id": "ui-ux-design",
     "icon": "bi-vector-pen",
     "title": "UI/UX Design",
-    "description": "Designing intuitive, engaging, and user-centric interfaces. We combine user research with modern aesthetics to create products that feel natural to navigate and delight your users."
+    "description": "Designing intuitive, engaging, and user-centric interfaces. We combine user research with modern aesthetics to create products that feel natural to navigate and delight your users.",
+    "link": "ui-ux-design.html"
   },
   {
     "id": "web-development",
     "icon": "bi-code-slash",
     "title": "Web Development",
-    "description": "Building responsive, highly optimized, and scalable web applications. We utilize cutting-edge technologies to ensure rapid loading, ironclad security, and flawless cross-device performance."
+    "description": "Building responsive, highly optimized, and scalable web applications. We utilize cutting-edge technologies to ensure rapid loading, ironclad security, and flawless cross-device performance.",
+    "link": "web-development.html"
   },
   {
     "id": "mobile-app-design",
     "icon": "bi-phone",
     "title": "Mobile App Design",
-    "description": "Engineering seamless native and cross-platform mobile apps for iOS and Android. We focus on high-performance architectures, fluid animations, and offline-first capabilities."
+    "description": "Engineering seamless native and cross-platform mobile apps for iOS and Android. We focus on high-performance architectures, fluid animations, and offline-first capabilities.",
+    "link": "mobile-app-design.html"
   },
   {
     "id": "digital-marketing",
     "icon": "bi-megaphone",
     "title": "Digital Marketing",
-    "description": "Accelerating your online growth through strategic, data-driven campaigns. We specialize in social media management, targeted paid advertising, and high-conversion funnel design."
+    "description": "Accelerating your online growth through strategic, data-driven campaigns. We specialize in social media management, targeted paid advertising, and high-conversion funnel design.",
+    "link": "digital-marketing.html"
   },
   {
     "id": "seo-optimization",
     "icon": "bi-search",
     "title": "SEO Optimization",
-    "description": "Maximizing your organic visibility and search engine rankings. Through deep technical audits, keyword research, and content strategy, we drive sustainable, high-intent traffic to your site."
+    "description": "Maximizing your organic visibility and search engine rankings. Through deep technical audits, keyword research, and content strategy, we drive sustainable, high-intent traffic to your site.",
+    "link": "seo-optimization.html"
   },
   {
     "id": "training",
     "icon": "bi-mortarboard",
     "title": "Training",
-    "description": "Empowering your internal teams with custom software, design, and technical mastery workshops. We deliver structured, practical training programs led by industry-vetted professionals."
+    "description": "Empowering your internal teams with custom software, design, and technical mastery workshops. We deliver structured, practical training programs led by industry-vetted professionals.",
+    "link": "training.html"
   },
   {
     "id": "computer-sales",
     "icon": "bi-pc-display",
     "title": "Computer Sales",
-    "description": "Supplying premium, high-performance workstations, enterprise servers, and tailored hardware setups. We source and configure reliable tech infra optimized for your workload demands."
+    "description": "Supplying premium, high-performance workstations, enterprise servers, and tailored hardware setups. We source and configure reliable tech infra optimized for your workload demands.",
+    "link": "computer-sales.html"
   },
   {
     "id": "database-design",
     "icon": "bi-database",
     "title": "Database Design",
-    "description": "Architecting secure, reliable, and highly normalized database structures. We specialize in optimization, indexing, and clustering to handle complex data transactions at scale with zero lag."
+    "description": "Architecting secure, reliable, and highly normalized database structures. We specialize in optimization, indexing, and clustering to handle complex data transactions at scale with zero lag.",
+    "link": "database-design.html"
   }
 ]

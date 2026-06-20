@@ -101,9 +101,20 @@ function openModal(service) {
     // Populates your custom dialog elements safely
     const modalTitle = document.querySelector("#modal-title");
     const modalDescription = document.querySelector("#modal-description");
+    const modalLink = document.querySelector("#modal-link");
 
     if (modalTitle) modalTitle.textContent = service.title;
     if (modalDescription) modalDescription.textContent = service.description;
+
+    // Dynamically updates the "Find Out More" button link
+    if (modalLink) {
+        if (service.link) {
+            modalLink.href = service.link;
+        } else {
+            // Fallback safety option if a specific link property is missing in the data
+            modalLink.href = "services.html";
+        }
+    }
 
     modal.showModal();
 }
